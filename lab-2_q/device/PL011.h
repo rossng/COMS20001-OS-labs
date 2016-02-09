@@ -7,16 +7,16 @@
 /* The ARM PrimeCell UART (PL011) is documented at
  *
  * http://infocenter.arm.com/help/topic/com.arm.doc.ddi0183g/index.html
- * 
- * In particular, Section 3 explains the programmer's model, i.e., how to 
- * interact with it: this includes 
- * 
+ *
+ * In particular, Section 3 explains the programmer's model, i.e., how to
+ * interact with it: this includes
+ *
  * - Section 3.2, which summarises the device register layout in Table 3.1
  *   (including an offset from the device base address, in the memory map,
  *   for each register), and
  * - Section 3.3, which summarises the internal structure of each device
  *   register.
- * 
+ *
  * Note that the field identifiers used here follow the documentation in a
  * general sense, but with a some minor alterations to improve clarity and
  * consistency.
@@ -36,9 +36,9 @@ union {
   uint32_t   LPR;            // base+0x0020          : low-power counter
   uint32_t  IBRD;            // base+0x0024          : integer    baud rate
   uint32_t  FBRD;            // base+0x0028          : fractional baud rate
-  uint32_t   LCR;            // base+0x002C          : line control 
+  uint32_t   LCR;            // base+0x002C          : line control
   uint32_t    CR;            // base+0x0030          :      control
-  uint32_t  IFLS;            // base+0x0034          : interrupt level select 
+  uint32_t  IFLS;            // base+0x0034          : interrupt level select
   uint32_t  IMSC;            // base+0x0038          : interrupt mask
   uint32_t   RIS;            // base+0x003C          : raw    interrupt status
   uint32_t   MIS;            // base+0x0040          : masked interrupt status
@@ -50,9 +50,9 @@ union {
 } PL011_t;
 
 /* We know from
- * 
+ *
  * http://infocenter.arm.com/help/topic/com.arm.doc.dui0417d/index.html
- * 
+ *
  * that the platform has 4 PL011 devices(s), each of which we capture as an
  * instance of the PL011_t structure.
  */

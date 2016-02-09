@@ -1,2 +1,5 @@
 .vagrant/
 *.tar.gz
+*.o
+*.gch
+*.a
